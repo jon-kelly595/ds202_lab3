@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r}
+```{r, warning=FALSE, message=FALSE}
 dat <- readxl::read_xls('JonGSS.xls')
 dat$`Highest year of school completed` <- as.numeric(dat$`Highest year of school completed`)
 dat <- na.omit(dat)

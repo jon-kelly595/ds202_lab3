@@ -382,14 +382,9 @@ summary {
 </div>
 
 
-<pre class="r"><code>dat &lt;- readxl::read_xls(&#39;JonGSS.xls&#39;)</code></pre>
-<pre><code>## Warning in read_fun(path = enc2native(normalizePath(path)), sheet_i = sheet, :
-## Expecting numeric in A64817 / R64817C1: got &#39;Source&#39;</code></pre>
-<pre><code>## Warning in read_fun(path = enc2native(normalizePath(path)), sheet_i = sheet, : Expecting numeric in B64817 / R64817C2: got &#39;Data collection: General Social Survey
-## Case Selection: all cases&#39;</code></pre>
-<pre class="r"><code>dat$`Highest year of school completed` &lt;- as.numeric(dat$`Highest year of school completed`)</code></pre>
-<pre><code>## Warning: NAs introduced by coercion</code></pre>
-<pre class="r"><code>dat &lt;- na.omit(dat)
+<pre class="r"><code>dat &lt;- readxl::read_xls(&#39;JonGSS.xls&#39;)
+dat$`Highest year of school completed` &lt;- as.numeric(dat$`Highest year of school completed`)
+dat &lt;- na.omit(dat)
 head(dat)</code></pre>
 <pre><code>## # A tibble: 6 x 8
 ##   `Gss year for t… `Respondent id … `Marital status` `Highest year o…
